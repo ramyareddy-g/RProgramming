@@ -1,0 +1,16 @@
+fruits<- c('apples', 'oranges', 'grapes','strawberries')
+vegetables<- c('tomatoes', 'carrots', 'broccoli', 'lettuce')
+salad<- factor(fruits)
+food<- factor(fruits)
+salad
+
+is.ordered(salad)
+is.ordered(food)
+
+sort.default(salad)
+sort.default(food)
+
+print(nlevels(salad))
+food
+print(nlevels(food))
+salad         
