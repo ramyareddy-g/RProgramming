@@ -1,5 +1,5 @@
-fruits<- c('apples', 'oranges', 'grapes','strawberries')
-vegetables<- c('tomatoes', 'carrots', 'broccoli', 'lettuce')
+fruits<- c('apples', 'oranges', 'grapes','strawberries', 'blueberries')
+vegetables<- c('tomatoes', 'carrots', 'broccoli', 'lettuce', 'onion')
 salad<- factor(fruits)
 food<- factor(fruits)
 salad
