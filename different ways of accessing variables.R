@@ -15,4 +15,7 @@ View(method2)
 method3<- AdultUCI[["relationship"]]
 class(method3)
 View(method3)
-
+# checking if the above objects are identical
+identical(method1, method2)
+identical(method1, method3)
+identical(method2, method3)
