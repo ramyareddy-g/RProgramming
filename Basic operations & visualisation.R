@@ -173,7 +173,7 @@ data<-read_excel("c:/Users/Unitech01/Desktop/lead_conversion2.xlsx")
 View(data)
 
 
-##
+## csv
 write.csv(data,file="c:/Users/Unitech01/Desktop/lead_excel.csv")
 
 ### Merging the data sets
