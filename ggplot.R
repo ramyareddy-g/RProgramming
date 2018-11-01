@@ -5,3 +5,6 @@ names(pf)
 ggplot(aes(x= friend_count), data = pf)+
   geom_histogram()+
     scale_x_continuous(limits = c(0,1000))
+#qplot
+qplot(x= friend_count, data= pf)+
+  scale_x_continuous(limits = c(0,1000))
