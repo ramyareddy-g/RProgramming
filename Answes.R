@@ -52,17 +52,8 @@ library(arules)
 data("AdultUCI")
 #table(AdultUCI$age, AdultUCI$sex)
 # number of females who are <50 and are black
-#method1 using dplyr data table manipulating functions
-library(dplyr)
-str(AdultUCI)
-AdultUCI$sex<-as.character(AdultUCI$sex)
-class(AdultUCI$sex)
-adult_new<- select(AdultUCI, age, sex, race)
-adult_new
-result<-filter(adult_new, age<50 & sex== "Female"& race== "Black" )
-dim(result)
 #table(AdultUCI$age, AdultUCI$sex)
-#method 2
+#method
 library(sqldf)
 age50<- sqldf("select age, sex, race from AdultUCI where age<50 AND race=='Black'")
 age50
