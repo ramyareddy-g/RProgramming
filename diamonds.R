@@ -1,0 +1,16 @@
+library(ggplot2)
+data(diamonds)
+str(diamonds)
+hist(price)
+levels(diamonds$color)
+str(diamonds$color)
+histogram(diamonds$color)
+?diamonds
+names(diamonds)
+ggplot(diamonds, aes(x= price, fill= redblue(1)))+
+  geom_histogram()
+summary(diamonds$price)
+table(diamonds$price)
+nrow(diamonds %>% select(price) %>% filter(price< 500))
+nrow(diamonds %>% select(price) %>% filter(price< 250))
+nrow(diamonds %>% select(price) %>% filter(price >=15000))
