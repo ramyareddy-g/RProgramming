@@ -79,14 +79,39 @@ which.max(a$volume)
 # level of clarity.
 
 
+diamondsByClarity<- diamonds %>% group_by(clarity)  %>% 
+  summarise(mean_price= mean(price),
+            median_price= median(price),
+            min_price= min(price),
+            max_price= max(price),
+            n= n())
+
+diamondsByClarity
+
+#created summary data frames with the mean price
+# by clarity and color. You can run the code in R to
+# verify what data is in the variables diamonds_mp_by_clarity
+# and diamonds_mp_by_color.
+# writing additional code to create two bar plots
+# on one output image using the grid.arrange() function from the package
+# gridExtra.
+
+diamonds_by_clarity <- group_by(diamonds, clarity)
+diamonds_mp_by_clarity <- summarise(diamonds_by_clarity, mean_price = mean(price))
+
+diamonds_by_color <- group_by(diamonds, color)
+diamonds_mp_by_color <- summarise(diamonds_by_color, mean_price = mean(price))
 
 
+g1<- ggplot(aes(x= clarity, fill= clarity), data = diamonds_mp_by_clarity)+
+  geom_bar()
+g1
 
+g2<- ggplot(aes(x= color, fill= color), data = diamonds_mp_by_color)+
+  geom_bar()
+g2
 
-
-
-
-
+grid.arrange(g1, g2, nrow= 2)
 
 
 
